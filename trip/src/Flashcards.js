@@ -1,3 +1,8 @@
+import "./app.css"
+
+import { useState } from "react";
+import "./styles.css";
+
 const Cards = [
   {
     id: 3457,
@@ -34,3 +39,23 @@ const Cards = [
     answer: "Controlled element",
   },
 ];
+
+export default function Flashcards() {
+  const [selectedId, setSelectedId] = useState(null); /// 7336
+  function handleClick(id) {
+    setSelectedId(id !== selectedId ? id : null);
+  }
+  return (
+    <div className="card-container">
+      {Cards.map((ele) => (
+        <div
+          key={ele.id}
+          className={ele.id == selectedId ? "selected" : "card"}
+          onClick={() => handleClick(ele.id)}
+        >
+          <p>{ele.id === selectedId ? ele.answer : ele.question}</p>
+        </div>
+      ))}
+    </div>
+  );
+}

@@ -1,0 +1,30 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 30%;
+  text-align: center;
+  margin: 10px;
+  height: 120px;
+  padding-top: 30px;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px black;
+  border-radius: 10px;
+}
+
+.selected {
+  width: 30%;
+  text-align: center;
+  margin: 10px;
+  height: 120px;
+  padding-top: 30px;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px black;
+  border-radius: 10px;
+  background-color: rgb(126, 20, 20);
+  color: white;
+}
