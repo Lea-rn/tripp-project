@@ -1,7 +1,7 @@
 import "./app.css"
 
 import { useState } from "react";
-import "./styles.css";
+// import "./styles.css";
 
 const Cards = [
   {
